@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login - COCA INVEST</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <header>
+                <a href="index.html">
+                    <img src="imagens/logo_horizontal.png" alt="Coca Investimentos" class="logo">
+                </a>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="investimentos.html">Investimentos</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="calculadora.html">Calculadora</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <section class="login-section">
+                <h2>Login</h2>
+                <form id="form-login">
+                    <label for="usuario">Usuário</label>
+                    <input type="text" id="usuario" name="usuario" placeholder="Digite seu usuário">
+
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha" placeholder="Digite sua senha">
+
+                    <button type="submit">Entrar</button>
+                </form>
+                <p id="login-erro" class="login-erro"></p>
+            </section>
+        </div>
+
+        <script src="login.js"></script>
+    </body>
+</html>

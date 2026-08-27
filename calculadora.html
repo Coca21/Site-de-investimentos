@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculadora - COCA INVEST</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css"> 
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <header>
+                <a href="index.html">
+                    <img src="imagens/logo_horizontal.png" alt="Coca Investimentos" class="logo">
+                </a>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="investimentos.html">Investimentos</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="calculadora.html">Calculadora</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <section class="calculadora"> 
+                    <h2>
+                        <img src="imagens/icone-juros.png" alt="" class="icone-titulo">
+                        Calculadora de Juros compostos
+                    </h2>
+                <form id="form-calculadora">
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="valor-inicial">Valor Inicial</label>
+                            <div class="input-group">
+                                <span class="prefixo">R$</span>
+                                <input type="number" id="valor-inicial" placeholder="0,00">
+                            </div>
+                        </div>
+                        <div class="form-field">
+                            <label for="taxa-juros">Taxa de Juros</label>
+                            <div class="input-group">
+                                <span class="prefixo">%</span>
+                                <input type="number" id="taxa-juros" step="0.01" placeholder="0,00">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="tempo">Período</label>
+                            <div class="input-group">
+                                <input type="number" id="tempo" placeholder="0">
+                                <select id="periodo">
+                                    <option value="meses">Meses</option>
+                                    <option value="anos">Anos</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-field">
+                            <label for="aporte-mensal">Investimento Mensal</label>
+                            <div class="input-group">
+                                <span class="prefixo">R$</span>
+                                <input type="number" id="aporte-mensal" placeholder="0,00">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-buttons">
+                        <button type="reset" id="btn-limpar">
+                            Limpar
+                            <img src="imagens/icone-limpar.png" alt="" class="icone-botao">
+                        </button>
+                        <button type="button" id="btn-calcular">
+                            Calcular
+                            <img src="imagens/icone-calcular.png" alt="" class="icone-botao">
+                        </button>
+                    </div>
+                </form>
+
+                <div class="grafico-section">
+                    <h3>Evolução do Investimento</h3>
+                    <canvas id="grafico-juros"></canvas>
+                </div>
+
+                <div class="resultado-section">
+                    <h3>Resultado</h3>
+                    <div class="resultado-cards">
+                        <div class="card-resultado">
+                            <span>Total em Juros</span>
+                            <strong id="resultado-juros"></strong>
+                        </div>
+                        <div class="card-resultado">
+                            <span>Valor Total em juros</span>
+                            <strong id="resultado-investido"></strong>
+                        </div>
+                        <div class="card-resultado">
+                            <span>Valor Total Final</span>
+                            <strong id="resultado-final"></strong>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <script src="script.js"></script>
+
+    </body>
+</html>

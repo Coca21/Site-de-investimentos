@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Investimentos - COCA INVEST</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <header>
+                <a href="index.html">
+                    <img src="imagens/logo_horizontal.png" alt="Coca Investimentos" class="logo">
+                </a>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="investimentos.html">Investimentos</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="calculadora.html">Calculadora</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <section class="cotacoes">
+                <h2>Cotações ao Vivo</h2>
+                <table class="tabela-cotacoes">
+                    <thead>
+                        <tr>
+                            <th>Ativo</th>
+                            <th>Cotação</th>
+                            <th>Variação</th> 
+                            <th>Setor</th>
+                        </tr>
+                    </thead>
+                    <tbody id="corpo-tabela">
+                    </tbody>
+                </table>  
+            </section>
+            
+        </div>
+        
+        <script src="investimentos.js"></script>
+
+    </body>
+</html>
